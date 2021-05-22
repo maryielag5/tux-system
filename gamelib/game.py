@@ -50,7 +50,6 @@ class Game(object):
 
     def __init__(self, screen, continuing=False):
 
-        print "sdfsdgsdg"
         self.screen = screen
         self.sprites = pygame.sprite.OrderedUpdates()
         self.players = pygame.sprite.OrderedUpdates()
@@ -212,9 +211,9 @@ class Game(object):
                 self.bg = load_image("background-1.png")
         if not continuing:
             cutscene(self.screen,
-                     ['NOTA: TUX-SYSTEM',
-                      'PRIMERA VERSION',
-                      'PRESENTA 4 NIVELES.'])
+                    ['NOTA: TUX-SYSTEM',
+                    'PRIMERA VERSION',
+                    'PRESENTA 4 NIVELES.'])
             stop_music()
 
         self.intro_level()
@@ -254,7 +253,7 @@ class Game(object):
                 self.lives += 1
             cutscene(self.screen,
             ['LOGRASTE PASAR LOS 4 NIVELES',
-             'PRESIONE ENTER PARA CONTINUAR'])
+            'PRESIONE ENTER PARA CONTINUAR'])
 
 
             self.end()
@@ -389,11 +388,10 @@ class Game(object):
                         if not random.randrange(70):
                             BaddieShot(b.rect.center)
                 if b.type != "squidge":
-                    b.collide(self.nomoveplatforms)              # Big problem here somewhere,
-                    b.collide(self.springs)                      # The enemies is making the game laggy.
-                    b.collide(self.cannons)                      # Main problem would be b.collide(self.nomoveplatforms)
-                                                                 # Makes the enemies collide with main platform and for some reason,
-                                                                 # that causes alot of problems.
+                    b.collide(self.nomoveplatforms)
+                    b.collide(self.springs)
+                    b.collide(self.cannons)
+
             for c in self.cannons:
                 if c.rect.colliderect(self.camera.rect):
                     if c.type == "cannon":
