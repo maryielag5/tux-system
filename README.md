@@ -1,7 +1,10 @@
-tux-system
+TUX
 ==========
+El proyecto esta elaborado, en le lenguaje de programacion python.
 
-juego en python2.7 y python-pygame
+# REQUERIMIENTOS
+- python2.7
+- libreria pygame
 
-# Ejecutar
-python start.py
+#	EJECUCCION
+$ python start.py
