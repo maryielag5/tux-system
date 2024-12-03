@@ -1,6 +1,6 @@
 TUX
 ==========
-El proyecto esta elaborado, en le lenguaje de programacion python.
+Proyecto en python
 
 # REQUERIMIENTOS
 - python2.7
